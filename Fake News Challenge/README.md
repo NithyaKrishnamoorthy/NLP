@@ -1,4 +1,4 @@
-## Fake News Stance Detection: A Machine Learning and Deep Learning Approach
+## Fake News Stance Detection: A Machine Learning Approach
 
 ### Introduction and background
 Fake news, defined by the New York Times as “a made-up story with an intention to deceive”, often for a secondary gain, is arguably one of the most serious challenges facing the news industry today. 
@@ -33,11 +33,3 @@ Trigram _count	Number of Trigram in the headline that appears in the entire arti
 Headline_sentiment  	Compound sentiment score of the headline, obtained using VADER
 Articlebody_sentiment	Compound sentiment score of the article body, obtained using VADER
 TFIDF vector with Cosine Similarity	- The value of the cosine similarity is the feature value. Higher the value, higher the degree of similarity and vice versa.
-
-### Deep Learning
-
-•	Bag of Words
-For a simple baseline, a bag of embedded words model was constructed where the embedding vectors of the headline and the body were averaged separately, concatenated, and used as the input to a feed to a feed-forward neural network with a softmax output layer.
-
-•	Long Short-Term Memory Network (LSTM)
-A standard LSTM model that processes a concatenation of tokens in the headline and the article body to produce a classification of the stance. 
