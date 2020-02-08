@@ -42,3 +42,24 @@ The dataset was first prepared by taking a total of 1,683 unique pair of headlin
 <tr><td>TFIDF vector with Cosine Similarity	</td> 	<td> The value of the cosine similarity is the feature value. Higher the value, higher the degree of similarity and vice versa.</td>
 </tr>
 </table>
+
+### Model
+SVM and Logistic regression classifiers are used to perform the classification.
+
+### Evaluation Metric
+
+The official metric of the Fake News Challenge is a score based on how many predictions were correct. 
+The different stance classes were weighted. If the model correctly identifies the related/unrelated stance for a headline-body pair, it is awarded 0.25 points and if it correctly predicts any of the other three classes, it is awarded 0.75 points. 
+The reason for this is that the task of determining unrelated/related is trivial compared to determining other classes.
+
+The following metrics were used to evaluate:
+<ul>
+<li>Classification Accuracy to get the number of correct predictions from all predictions made.</li>
+<li>F1 Score is the harmonic average of Precision and Recall. Takes false positives and false negatives into account.</li>
+<li>Confusion Matrix to describe the performance of a classification model on a set of test data for which the true values are known. Classification accuracy alone can be misleading as we have more than 2 classes in the dataset and have an unequal number of observations in each class.</li>
+</ul>
+
+### Results
+SVM model gave a score of 7026.5 out of 8985, while the logistic regression model gave a score of 7261.5 out of 8985
+Even though SVM model has a higher score, the logistic regression model has higher correct prediction on disagree/agree/discuss classes. 
+Thus, it is suggested to use different machine learning models for different goals.
